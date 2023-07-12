@@ -1,6 +1,6 @@
 import { Icon } from '@chakra-ui/react';
 import { MdBarChart, MdPerson, MdHome, MdLock, MdOutlineShoppingCart } from 'react-icons/md';
-
+import "tailwindcss/tailwind.css"
 // Admin Imports
 import MainDashboard from 'views/admin/default';
 import NFTMarketplace from 'views/admin/marketplace';
@@ -10,6 +10,7 @@ import DataTables from 'views/admin/dataTables';
 // Auth Imports
 import SignInCentered from 'views/auth/signIn';
 import SignUpCentered from 'views/auth/signUp';
+import Landing from 'components/Landing-Page/Landing';
 
 const routes = [
 	{
@@ -54,6 +55,13 @@ const routes = [
 		path: '/sign-Up',
 		icon: <Icon as={MdLock} width='20px' height='20px' color='inherit' />,
 		component: SignUpCentered
+	},
+	{
+		name: 'Landing Page',
+		layout: '/auth',
+		path: '/landing',
+		icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
+		component: Landing
 	},
 
 ];
